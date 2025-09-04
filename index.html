@@ -49,6 +49,9 @@
         box-shadow: var(--box-shadow);
         padding: 15px 0;
     }
+    .section-header{
+        margin-bottom: 10px;
+    }
 
     </style>
 </head>
@@ -113,33 +116,33 @@
 
     
     <!-- Mobile Info Cards (Only visible on mobile) -->
-    <div class="mobile-info-cards">
+    <section class="mobile-info-cards" aria-label="Key Features">
         <div class="container">
-            <div class="info-card">
+            <article class="info-card">
                 <div class="info-card-icon">
-                    <i class="fas fa-gem"></i>
+                    <i class="fas fa-gem" aria-hidden="true"></i>
                 </div>
                 <h3>Luxury Experience</h3>
                 <p>Discover the essence of luxury with our handcrafted products made from the finest materials.</p>
-            </div>
+            </article>
             
-            <div class="info-card">
+            <article class="info-card">
                 <div class="info-card-icon">
-                    <i class="fas fa-globe"></i>
+                    <i class="fas fa-globe" aria-hidden="true"></i>
                 </div>
                 <h3>Global Craftsmanship</h3>
                 <p>Our products feature ingredients and materials sourced from the most prestigious regions worldwide.</p>
-            </div>
+            </article>
             
-            <div class="info-card">
+            <article class="info-card">
                 <div class="info-card-icon">
-                    <i class="fas fa-award"></i>
+                    <i class="fas fa-award" aria-hidden="true"></i>
                 </div>
                 <h3>Excellence Guaranteed</h3>
                 <p>Every Fajr product undergoes rigorous quality checks to ensure perfection in every detail.</p>
-            </div>
+            </article>
         </div>
-    </div>
+    </section>
 
     <!-- Art of Perfumery Section -->
     <section class="art-perfumery">
@@ -169,8 +172,8 @@
                 </div>
                 <div class="about-text">
                     <h2>About Fajr</h2>
-                    <p>FAJR emerged from a deep appreciation for natural beauty and cultural heritage. Our brand was founded with a simple yet profound vision: to create fragrances that capture the essence of elegance and sophistication.</p>
-                    <p>Drawing inspiration from the world's most beautiful landscapes and timeless traditions, we set out to craft perfumes that tell stories of beauty, grace, and timeless appeal. Our journey began with a commitment to excellence and a passion for creating memorable olfactory experiences.</p>
+                    <p>Fajr Perfume Company was founded in 2019 by two close friends with a shared passion for fine fragrances and a vision to create a distinctive presence in the perfume industry. What began as a humble initiative quickly grew into a successful brand, thanks to their dedication to quality, innovation, and customer satisfaction.</p>
+                    <p>Within a short span of time, Fajr Perfume successfully launched its products across 10 Indian states and 3 Union Territories, earning a loyal customer base and strong market presence. Building on this domestic success, the company proudly expanded its reach internationally and now exports to the United Arab Emirates (UAE), bringing the essence ofindian craflsmanship to a global audience. Fajr Perfume stands as a testament to entrepreneurial spirit, commitment to excellence, and the power of dreams turned into reality.</p>
                     <a href="about.html" class="btn btn-outline">Discover Our Story</a>
                 </div>
             </div>
@@ -181,66 +184,66 @@
     <section class="featured-products">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Explore</h2>
+                <h3 class="section-title">Explore</h3>
                 <div class="section-line"></div>
-            </div>
-            <div class="products-grid">
+            <div>
+            <div class="products-grid" role="list" aria-label="Featured perfume products">
                 <!-- Perfume 1 -->
-                <div class="product-card">
-                    <div class="product-image">
+                <article class="product-card" role="listitem">
+                    <figure class="product-image">
                         <img src="images/perfume-3.jpg" alt="Amber Mystique luxury cologne for men by Fajr">
                         <div class="product-overlay">
                             <a href="product-details.html?id=5" class="overlay-btn">View Details</a>
                         </div>
-                    </div>
+                    </figure>
                     <div class="product-info">
                         <h3 class="product-title">Amber Mystique</h3>
                         <p class="product-category">For Him</p>
                         <p class="product-price">₹14,200</p>
                     </div>
-                </div>
+                </article>
                 <!-- Perfume 2 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/perfume-4.jpg" alt="Luxury Perfume">
+                <article class="product-card" role="listitem">
+                    <figure class="product-image">
+                        <img src="images/perfume-4.jpg" alt="Velvet Orchid women's luxury floral perfume by Fajr">
                         <div class="product-overlay">
                             <a href="product-details.html?id=6" class="overlay-btn">View Details</a>
                         </div>
-                    </div>
+                    </figure>
                     <div class="product-info">
                         <h3 class="product-title">Velvet Orchid</h3>
                         <p class="product-category">For Her</p>
                         <p class="product-price">₹11,500</p>
                     </div>
-                </div>
+                </article>
                 <!-- Perfume 3 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/perfume-5.jpg" alt="Luxury Perfume">
+                <article class="product-card" role="listitem">
+                    <figure class="product-image">
+                        <img src="images/perfume-5.jpg" alt="Cedar Noir men's premium woody fragrance by Fajr">
                         <div class="product-overlay">
                             <a href="product-details.html?id=7" class="overlay-btn">View Details</a>
                         </div>
-                    </div>
+                    </figure>
                     <div class="product-info">
                         <h3 class="product-title">Cedar Noir</h3>
                         <p class="product-category">For Him</p>
                         <p class="product-price">₹13,800</p>
                     </div>
-                </div>
+                </article>
                 <!-- Perfume 4 -->
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="images/perfume-6.jpg" alt="Luxury Perfume">
+                <article class="product-card" role="listitem">
+                    <figure class="product-image">
+                        <img src="images/perfume-6.jpg" alt="Jasmine Dreams women's elegant floral perfume by Fajr">
                         <div class="product-overlay">
                             <a href="product-details.html?id=8" class="overlay-btn">View Details</a>
                         </div>
-                    </div>
+                    </figure>
                     <div class="product-info">
                         <h3 class="product-title">Jasmine Dreams</h3>
                         <p class="product-category">For Her</p>
                         <p class="product-price">₹10,900</p>
                     </div>
-                </div>
+                </article>
             </div>
             <div class="view-all-container">
                 <a href="perfumes.html" class="btn btn-outline">Explore All</a>
@@ -254,7 +257,6 @@
 
     <!-- Footer -->
     <footer class="footer">
-        
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
@@ -262,15 +264,15 @@
                     <p>Luxury Redefined</p>
                 </div>
                 
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                </div>
+                <nav class="social-icons" aria-label="Social Media Links">
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                </nav>
                 
                 <!-- Desktop footer links preserved but hidden on mobile via CSS -->
                 <div class="footer-links">
-                    <div class="footer-column">
+                    <nav class="footer-column" aria-label="Quick Links">
                         <h3>Quick Links</h3>
                         <ul>
                             <li><a href="index.html">Home</a></li>
@@ -278,20 +280,19 @@
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
-                    </div>
+                    </nav>
                     
-                    <div class="footer-column">
+                    <section class="footer-column">
                         <h3>Feedback</h3>
-                        <div class="footer-feedback-form">
-                            <input type="text" placeholder="Your email" class="feedback-input">
-                            <textarea placeholder="Your message" class="feedback-input" rows="3"></textarea>
-                            <button class="btn btn-primary feedback-btn">Submit</button>
-                        </div>
-                    </div>
+                        <form class="footer-feedback-form" aria-label="Feedback Form">
+                            <input type="email" placeholder="Your email" class="feedback-input" aria-label="Your email">
+                            <textarea placeholder="Your message" class="feedback-input" rows="3" aria-label="Your message"></textarea>
+                            <button type="submit" class="btn btn-primary feedback-btn">Submit</button>
+                        </form>
+                    </section>
                 </div>
             </div>
             <div class="footer-bottom">
-                
                 <p>&copy; 2025 Fajr. All Rights Reserved.</p>
             </div>
         </div>
