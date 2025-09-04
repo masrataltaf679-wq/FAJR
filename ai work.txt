@@ -1,0 +1,7 @@
+ai work: 
+
+
+improve design of my orders 
+ checkout sumary cart should not be displayed on payment methods.
+ my work:
+add images 

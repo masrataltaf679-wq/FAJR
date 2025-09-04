@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Fajr's exclusive collection of luxury perfumes for men and women. Find your signature scent from our premium fragrance selection.">
+    <meta name="keywords" content="luxury perfumes, designer fragrances, men's cologne, women's perfume, Fajr collection, premium scents">
+    <meta name="author" content="Fajr Luxury">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fajrluxury.com/perfumes.html">
+    <title>Premium Perfume Collection | Fajr Luxury Fragrances</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Midnight Oud",
+            "image": "https://fajrluxury.com/images/products/product-1.jpg",
+            "description": "A rich and mysterious fragrance with notes of oud, amber, and spices.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Fajr Luxury"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://fajrluxury.com/product-details.html?id=1",
+              "priceCurrency": "USD",
+              "price": "199.99",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "Rose Elixir",
+            "image": "https://fajrluxury.com/images/products/product-2.jpg",
+            "description": "An elegant floral fragrance with notes of Damascus rose, peony, and vanilla.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Fajr Luxury"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://fajrluxury.com/product-details.html?id=2",
+              "priceCurrency": "USD",
+              "price": "179.99",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "Citrus Breeze",
+            "image": "https://fajrluxury.com/images/products/product-3.jpg",
+            "description": "A refreshing fragrance with notes of bergamot, lemon, and cedar.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Fajr Luxury"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://fajrluxury.com/product-details.html?id=3",
+              "priceCurrency": "USD",
+              "price": "159.99",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Page-specific styles */
+        
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .overlay-btn {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .add-to-cart:before {
+            content: '\f07a';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+        
+        .filter-container {
+            background-color: var(--gray-color);
+            padding: 20px 0;
+            margin-bottom: 50px;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            
+        }
+        
+        .filter-btn {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+        }
+        
+        .gender-filter {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <!-- Preloader removed -->
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">FAJR</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="perfumes.html" class="nav-link">Perfumes</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li class="cart"><a href="cart.html" class="nav-link active">Cart</a></li>
+                    <li class="account"><a href="account.html" class="nav-link active">My account</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="cart.html" class="icon-link"><i class="fas fa-shopping-bag"></i></a>
+                    <a href="account.html" class="icon-link"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Explore Hero Section -->
+    <section class="explore-hero">
+        <div class="container">
+            <div class="explore-hero-content">
+                <h1 class="explore-title">Luxury Perfumes</h1>
+                <p class="explore-subtitle">Discover our exclusive collection of luxury fragrances.</p>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+    <section class="products-section">
+
+    <div class="gender-filter">
+                <button class="filter-btn active" data-gender="all">All</button>
+                <button class="filter-btn" data-gender="him">For Him</button>
+                <button class="filter-btn" data-gender="her">For Her</button>
+                <button class="filter-btn" data-gender="unisex">Unisex</button>
+            </div>
+            <div class="products-grid">
+                <!-- Perfume Products -->
+                <div class="product-card" data-category="perfumes" data-gender="him" data-price="12500">
+                    <div class="product-image">
+                        <img src="images/perfume-1.jpg" alt="Midnight Oud luxury men's perfume with rich oud and amber notes by Fajr">
+                        <div class="product-badge">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Midnight Oud</h3>
+                        <p class="product-category">Perfume <span class="gender-tag">For Him</span></p>
+                        <p class="product-price">₹12,500</p>
+                        <a href="product-details.html?id=1" class="mobile-view-btn">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="perfumes" data-gender="her" data-price="15800">
+                    <div class="product-image">
+                        <img src="images/perfume-2.jpg" alt="Rose Elixir premium women's fragrance with Damascus rose and peony by Fajr">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Rose Elixir</h3>
+                        <p class="product-category">Perfume <span class="gender-tag">For Her</span></p>
+                        <p class="product-price">₹15,800</p>
+                        <a href="product-details.html?id=2" class="mobile-view-btn">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="perfumes" data-gender="unisex" data-price="18900">
+                    <div class="product-image">
+                        <img src="images/perfume-3.jpg" alt="Amber Mystique unisex luxury perfume with warm amber and spice notes by Fajr">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Amber Mystique</h3>
+                        <p class="product-category">Perfume <span class="gender-tag">Unisex</span></p>
+                        <p class="product-price">₹18,900</p>
+                        <a href="product-details.html?id=3" class="mobile-view-btn">View Details</a>
+                    </div>
+                </div>
+    </section>
+    <br> 
+    <section class="pagination-section">            
+                        
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    
+    </section>
+    <!-- JavaScript for Add to Cart functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add to cart functionality
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const productId = this.getAttribute('data-id');
+                    const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
+                    const productPrice = this.closest('.product-card').querySelector('.product-price').textContent;
+                    const productImage = this.closest('.product-card').querySelector('img').src;
+                    
+                    // Get existing cart or create new one
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    
+                    // Check if product already in cart
+                    const existingProduct = cart.find(item => item.id === productId);
+                    
+                    if (existingProduct) {
+                        existingProduct.quantity += 1;
+                    } else {
+                        cart.push({
+                            id: productId,
+                            title: productTitle,
+                            price: productPrice,
+                            image: productImage,
+                            quantity: 1
+                        });
+                    }
+                    
+                    // Save cart to localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    
+                    // Show notification
+                    showNotification(productTitle + ' added to cart!');
+                });
+            });
+            
+            // Notification function
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'cart-notification';
+                notification.innerHTML = `
+                    <div class="notification-content">
+                        <i class="fas fa-check-circle"></i>
+                        <p>${message}</p>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                // Add styles
+                notification.style.position = 'fixed';
+                notification.style.bottom = '20px';
+                notification.style.right = '20px';
+                notification.style.backgroundColor = 'var(--primary-color)';
+                notification.style.color = 'white';
+                notification.style.padding = '15px 20px';
+                notification.style.borderRadius = '5px';
+                notification.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+                notification.style.zIndex = '1000';
+                notification.style.transform = 'translateY(100px)';
+                notification.style.opacity = '0';
+                notification.style.transition = 'all 0.3s ease';
+                
+                // Show notification
+                setTimeout(() => {
+                    notification.style.transform = 'translateY(0)';
+                    notification.style.opacity = '1';
+                }, 10);
+                
+                // Hide after 3 seconds
+                setTimeout(() => {
+                    notification.style.transform = 'translateY(100px)';
+                    notification.style.opacity = '0';
+                    
+                    // Remove from DOM after animation
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>FAJR</h2>
+                    <p>Luxury Redefined</p>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+                
+                <!-- Desktop footer links preserved but hidden on mobile via CSS -->
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="explore.html">Explore</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Feedback</h3>
+                        <div class="footer-feedback-form">
+                            <input type="text" placeholder="Your email" class="feedback-input">
+                            <textarea placeholder="Your message" class="feedback-input" rows="3"></textarea>
+                            <button class="btn btn-primary feedback-btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                
+                <p>&copy; 2025 Fajr. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Add to Cart functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add event listeners to all Add to Cart buttons
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get product details
+                    const productId = this.getAttribute('data-id');
+                    const productCard = this.closest('.product-card');
+                    const productTitle = productCard.querySelector('.product-title').textContent;
+                    const productPrice = productCard.querySelector('.product-price').textContent;
+                    const productImage = productCard.querySelector('.product-image img').src;
+                    
+                    // Get cart from localStorage or create empty array
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    
+                    // Check if product already in cart
+                    const existingProduct = cart.find(item => item.id === productId);
+                    
+                    if (existingProduct) {
+                        existingProduct.quantity += 1;
+                    } else {
+                        cart.push({
+                            id: productId,
+                            title: productTitle,
+                            price: productPrice,
+                            image: productImage,
+                            quantity: 1
+                        });
+                    }
+                    
+                    // Save cart to localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    
+                    // Show notification
+                    showNotification(productTitle + ' added to cart!');
+                });
+            });
+            
+            // Notification function
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'cart-notification';
+                notification.innerHTML = `
+                    <div class="notification-content">
+                        <i class="fas fa-check-circle"></i>
+                        <p>${message}</p>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                // Add styles
+                notification.style.position = 'fixed';
+                notification.style.bottom = '20px';
+                notification.style.right = '20px';
+                notification.style.backgroundColor = 'var(--primary-color)';
+                notification.style.color = 'white';
+                notification.style.padding = '15px 20px';
+                notification.style.borderRadius = '5px';
+                notification.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+                notification.style.zIndex = '1000';
+                notification.style.transform = 'translateY(100px)';
+                notification.style.opacity = '0';
+                notification.style.transition = 'all 0.3s ease';
+                
+                // Show notification
+                setTimeout(() => {
+                    notification.style.transform = 'translateY(0)';
+                    notification.style.opacity = '1';
+                }, 10);
+                
+                // Hide after 3 seconds
+                setTimeout(() => {
+                    notification.style.transform = 'translateY(100px)';
+                    notification.style.opacity = '0';
+                    
+                    // Remove from DOM after animation
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+        
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn[data-filter]');
+            const genderButtons = document.querySelectorAll('.filter-btn[data-gender]');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            let activeFilter = 'all';
+            let activeGender = 'all';
+            
+            // Category filter
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    activeFilter = this.getAttribute('data-filter');
+                    
+                    // Filter products
+                    filterProducts();
+                });
+            });
+            
+            // Gender filter
+            genderButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    genderButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    activeGender = this.getAttribute('data-gender');
+                    
+                    // Filter products
+                    filterProducts();
+                });
+            });
+            
+            // Filter products function
+            function filterProducts() {
+                productCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const gender = card.getAttribute('data-gender');
+                    
+                    // Check if card matches both filters
+                    const matchesCategory = activeFilter === 'all' || category === activeFilter;
+                    const matchesGender = activeGender === 'all' || gender === activeGender;
+                    
+                    if (matchesCategory && matchesGender) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Sort functionality
+            const sortSelect = document.getElementById('sort-select');
+            if (sortSelect) {
+                sortSelect.addEventListener('change', function() {
+                    const value = this.value;
+                    const productsGrid = document.querySelector('.products-grid');
+                    
+                    if (!productsGrid) return;
+                    
+                    const products = Array.from(productsGrid.children);
+                    
+                    products.sort((a, b) => {
+                        if (value === 'price-low') {
+                            return parseInt(a.dataset.price) - parseInt(b.dataset.price);
+                        } else if (value === 'price-high') {
+                            return parseInt(b.dataset.price) - parseInt(a.dataset.price);
+                        }
+                        // For 'featured' and 'newest', we'll just return to original order
+                        // In a real app, you'd have more data to sort by
+                        return 0;
+                    });
+                    
+                    // Clear and re-append sorted products
+                    productsGrid.innerHTML = '';
+                    products.forEach(product => {
+                        productsGrid.appendChild(product);
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
